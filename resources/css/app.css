@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-low-200 {
+    background-color: #d1fae5; /* Green */
+}
+
+.bg-medium-200 {
+    background-color: #feebc8; /* Yellow */
+}
+
+.bg-high-200 {
+    background-color: #fed7d7; /* Red */
+}
+
