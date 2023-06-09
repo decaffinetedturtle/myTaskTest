@@ -53,9 +53,30 @@
                                         $color = 'bg-red-100';
                                     }
                                 @endphp
+
+
                                 <div class="p-6 rounded-md mt-4 {{ $color }}">
                                     <h2 class="font-bold text-gray-700">{{ $task->title }}</h2>
                                     <p class="text-gray-700">{{ $task->description }}</p>
+
+                                    <!-- Update task form -->
+                                    <form method="post" action="{{ route('tasks.update', $task) }}" class="mt-2">
+                                        @csrf
+                                        @method('PUT')
+                                        <!-- Include inputs for title, description, and priority here... -->
+                                        <button type="submit"
+                                            class="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Update
+                                            task</button>
+                                    </form>
+
+                                    <!-- Delete task form -->
+                                    <form method="post" action="{{ route('tasks.destroy', $task) }}" class="mt-2">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"
+                                            class="text-sm bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Delete
+                                            task</button>
+                                    </form>
                                 </div>
                             @endforeach
                         @else
