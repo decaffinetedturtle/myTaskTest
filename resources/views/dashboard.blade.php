@@ -12,19 +12,21 @@
                     <form method="post" action="{{ route('tasks.store') }}" class="space-y-4">
                         @csrf
                         <div>
-                            <label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
+                            <label for="title" class="block text-sm font-medium text-gray-700"
+                                style="color: whitesmoke">Title:</label>
                             <input type="text"
                                 class="mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                                 name="title" style="color: black;" />
                         </div>
                         <div>
-                            <label for="description"
-                                class="block text-sm font-medium text-gray-700">Description:</label>
+                            <label for="description" class="block text-sm font-medium text-gray-700"
+                                style="color: whitesmoke">Description:</label>
                             <textarea class="form-control mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                                 name="description" style="color: black;"></textarea>
                         </div>
                         <div>
-                            <label for="priority" class="block text-sm font-medium text-gray-700">Priority:</label>
+                            <label for="priority" class="block text-sm font-medium text-gray-700"
+                                style="color: whitesmoke">Priority:</label>
                             <select
                                 class="form-control mt-1 block w-full rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                                 style="color: black;" name="priority">
@@ -58,6 +60,7 @@
                                 <div class="p-6 rounded-md mt-4 {{ $color }}">
                                     <h2 class="font-bold text-gray-700">{{ $task->title }}</h2>
                                     <p class="text-gray-700">{{ $task->description }}</p>
+
 
                                     <!-- Update task form -->
                                     <form method="post" action="{{ route('tasks.update', $task) }}" class="mt-2">
